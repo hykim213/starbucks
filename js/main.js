@@ -1,19 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function () {
-    searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function() {
-    searchEl.classList.add('focused');
-    searchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-searchInputEl.addEventListener('blur', function() {
-    searchEl.classList.remove('focused');
-    searchInputEl.setAttribute('placeholder', '');
-});
 
 //우측 배너 두개 - 아래로 스크롤 시 사라지고, 다시 올라가면 나타나도록 설정하는 부분
 const badgeEl = document.querySelector('header .badges');
@@ -165,12 +149,3 @@ spyEls.forEach(function(spyEl) {
         .setClassToggle(spyEl, 'show')
         .addTo(new ScrollMagic.Controller());
 });
-
-
-/**
- * 
-*/
-
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); // 2021
